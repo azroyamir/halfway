@@ -23,10 +23,33 @@
 	        VALUES('$username','$password','$UserEmail','$UserAddress1','$UserAddress2','$UserPoscode','$UserCity','$UserState','$UserPhone')";
 	  $result=mysql_query($sql);
 	  
-	  echo "<script type='text/javascript'>
-			alert('Register Successful!');
-			window.location='index.html';
-			</script>";
+	   $to = $UserEmail;
+       $subject = "Welcome to artShowcase";
+       $message = "
+
+       Welcome to artShowcase!
+
+       Hi $username!
+
+       You have just joined the newest artwork showcase website. We're glad to have you here! 
+       Now you can have full access to our website and start uploading your artwork. And don't forget to browse other artworks!
+       
+       Below is your account username and your password:
+             
+       Username : $username
+       Password : $password
+
+       Click here to start login http://artshowcase.comxa.com
+
+       This is auto generated message. Please don't reply to this email!
+
+
+";
+       $from = "shabbir@fyp207.com";
+       $headers = "From:" . $from;
+       mail($to,$subject,$message,$headers);
+	  
+	  header('Location: index.html');
 	  
 	  mysql_close();
 	
