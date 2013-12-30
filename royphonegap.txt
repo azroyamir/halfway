@@ -1,0 +1,26 @@
+http://www.youtube.com/watch?v=ZgUAT7CIhsY //html-->mobile app by phonegap
+
+http://windows.github.com/ //github for windows install (git shell)
+
+
+https://github.com/
+https://build.phonegap.com
+
+Set Up Git
+1.https://help.github.com/articles/set-up-git
+2.https://help.github.com/articles/generating-ssh-keys
+
+Mobile App
+1.Run Git Shell
+2.cd- change directory to developing folder
+3.git init
+4.md js (create js file for javascript)
+5.git add .
+6.git commit -a -m "description"
+7.go to github.com and create repository
+8. git remote add origin http://.............................	(origin can be any name)
+9.git push origin master					(origin change follow up)
+10. go to phonegap build create new app->open source
+11. get repository address from github 
+12. paste adress into phonegap and build app
+
